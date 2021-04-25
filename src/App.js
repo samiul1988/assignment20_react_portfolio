@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import { capitalizeFirstLetter } from './utils/helper'; 
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [ activeNavItem, setActiveNavItem ] = useState('about'); // state initialization
+    
+    // updates document title with current nav item 
+    useEffect(() => {
+        document.title = `Samiul's Portfolio - ${capitalizeFirstLetter(activeNavItem)}`;
+      }, [activeNavItem]);
+
+    return (
+        <div className=" app-container">
+            <Header activeNavItem={activeNavItem} setActiveNavItem={setActiveNavItem}/>
+            <Main activeNavItem={activeNavItem}/>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
