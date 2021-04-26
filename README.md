@@ -45,12 +45,15 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 
 * The project was developed from scratch.
 * Basic considerations were as follows:
-    * The application includes a service worker, a web manifest and indexedDB functionality
-    * If the user adds a transaction while offline, the transaction is saved to indexedDB database, but the display (table, chart and total) does not get updated until the app is back online 
-    * Application was deployed to Heroku 
+    * The application uses a single ```Header``` component and a single ```Footer``` component that appear on multiple pages
+    * The application uses a ```Navigation``` component inside the ```Header``` component that selectively renders relevant content without refreshing the page
+    * The application uses a single ```Project``` component that is used multiple times to generate each project card item in the ```Portfolio``` section
+    * I have used [Coolors](https://coolors.co/) to pick the primary/secondary/tertiary colors of the application
+    * The application was designed using mobile-first approach, and mobile screen size >= 390px were tested  
+    * The application was deployed to Github Page using ```gh-pages``` package 
 
 ### Demo Run
-![Demo Run](./public/images/assignment20_demo.gif)
+![Demo Run](./src/assets/images/assignment20_demo.gif)
 
 ### Link of Deployed Application
-[Heroku App Link](https://assignment19-budget-tracker.herokuapp.com/)
+[App Link](https://samiul1988.github.io/assignment20_react_porfolio)

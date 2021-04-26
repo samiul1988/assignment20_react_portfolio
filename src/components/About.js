@@ -7,7 +7,11 @@ const About = () => {
                 <h1>About me</h1>
             </div>
             <div className="img-containers mt-4 mb-4">
-                <img className="img-container img-fluid" src={require('../assets/images/profile-img.jpg').default}></img>
+                <img 
+                    className="img-container img-fluid" 
+                    alt="profile pic of Samiul"
+                    src={require('../assets/images/profile-img.jpg').default}>
+                </img>
             </div>
             <p>
                 This is Samiul Choudhury. I have completed MSc in Electrical Engineering
