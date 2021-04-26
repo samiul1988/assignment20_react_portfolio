@@ -56,4 +56,4 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 ![Demo Run](./src/assets/images/assignment20_demo.gif)
 
 ### Link of Deployed Application
-[App Link](https://samiul1988.github.io/assignment20_react_porfolio)
+[App Link](https://samiul1988.github.io/assignment20_react_portfolio/)
